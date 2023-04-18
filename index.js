@@ -1,4 +1,5 @@
 const testWords = [
+  'Développeur(se) PHP/MySQL',
   'Directeur(trice) Commercial(e)',
   'Masseur(se) professionnel(le)',
   // ----
@@ -111,7 +112,7 @@ const parseGenderWords = (words) => {
     }
     if (!hasGender) {
       for (const match of w.matchAll(
-          /([\wà-üÀ-Ü\ \-\']+)\((euse|e|esse|le|ère|sse|se|ne|trice|rice)\)($|(\ [\wà-üÀ-Ü\-\']+)+)/gm,
+          /([\wà-üÀ-Ü\ \-\']+)\((euse|e|esse|le|ère|sse|se|ne|trice|rice)\)($|(\ [\wà-üÀ-Ü\-\/\']+)+)/gm,
         )) {
         mVersion = match[1];
         const fSuffix = match[2];
